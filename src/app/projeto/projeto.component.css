@@ -1,0 +1,13 @@
+.card-title {
+  color: #fff;
+  position: absolute;
+  text-shadow: 2px;
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+  font-size: 32px;
+  text-shadow: 2px 2px 4px #000000;
+}
+.card-action a{
+  margin-left: 5px;
+}

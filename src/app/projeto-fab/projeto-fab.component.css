@@ -1,0 +1,14 @@
+.fixed-action-btn {
+    position: relative; 
+    right: 0;
+    bottom: 0;
+    margin-top: 5px;
+    margin-right: 5px;
+    margin-left: -100px;
+    z-index: 3;
+}
+
+.fixed-action-btn.horizontal ul li {
+  display: inline-block;
+  margin: 3px 3px 0 0;
+}
