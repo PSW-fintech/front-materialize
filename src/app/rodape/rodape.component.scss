@@ -1,0 +1,63 @@
+footer{
+    padding-top: 10px;
+    width: 100%;
+}
+
+@media (max-width: 400px) {
+    .dados-rodape{
+        margin-top: 45px;
+        padding-left: 20px;
+    }
+    .redes-sociais{
+        position: absolute;
+        right: 30%;
+        top: 10px;
+    }
+}
+
+@media (min-width: 400px) {
+    .dados-rodape{
+        padding-left: 20px;
+    }
+    .redes-sociais{
+        position: absolute;
+        right: 3px;
+        top: 10px;
+    }
+}
+
+.dados-rodape a{
+    color: white;
+    font-weight: 500;
+}
+
+.dados-rodape a:hover{
+    color: white;
+    font-weight: bold;
+}
+
+.endereco{
+    font-weight: 500;
+    color: white;
+    font-size: 14px;
+    padding-left: 20px;
+}
+
+
+#contact-green-white-divisor{
+    width: 300px;
+    height: 2px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background: white; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(0deg, lightgreen, yellow); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(0deg,  lightgreen, yellow); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(0deg, lightgreen, yellow); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(right, lightgreen, yellow); /* Standard syntax */
+}
+
+#links-white-divisor{
+    margin-right: 10px;
+    margin-left: 10px;
+    color: white;
+}
