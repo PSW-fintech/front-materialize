@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { MaterializeModule } from 'angular2-materialize';
+import { RouterModule }   from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { CabecalhoComponent } from './cabecalho/cabecalho.component';
@@ -14,6 +15,7 @@ import { RodapeComponent } from './rodape/rodape.component';
 import { LoginComponent } from './login/login.component';
 import { DepoimentoComponent } from './depoimento/depoimento.component';
 import { ContatoComponent } from './contato/contato.component';
+import { CadusuarioComponent } from './cadusuario/cadusuario.component';
 
 @NgModule({
   declarations: [
@@ -26,15 +28,22 @@ import { ContatoComponent } from './contato/contato.component';
     RodapeComponent,
     LoginComponent,
     DepoimentoComponent,
-    ContatoComponent
+    ContatoComponent,
+    CadusuarioComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    MaterializeModule
+    MaterializeModule,
+    RouterModule.forRoot([
+      { path: '', component: AppComponent },
+      { path: 'login', component: LoginComponent },
+      { path: 'cadusuario', component: CadusuarioComponent }
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
