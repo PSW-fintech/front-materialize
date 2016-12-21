@@ -14,9 +14,11 @@
           <input id="password" type="password" class="validate" required>
           <label for="password">Password</label>
         </div>
-        <button class="btn waves-effect waves-light right" type="submit" name="action">Entrar
-          <i class="material-icons right">send</i>
-        </button>
+            <a routerLink="/dashboard" routerLinkActive="dashboard">
+            <button class="btn waves-effect waves-light right" type="submit" name="action">Entrar
+              <i class="material-icons right">send</i>
+            </button>
+            </a>
       </form>
     </div>
 
@@ -25,7 +27,7 @@
     <div class="modal-content">
       <form action="" method="POST">
         <a href="#cadusuario">
-        <button class="btn waves-effect waves-light right" type="submit" name="action">Novo Usuário
+        <button class="btn waves-effect waves-light right" (click)="onSignInClicked($event)" type="submit" name="action">Novo Usuário
           <i class="material-icons right">send</i>
         </button>
         </a>
@@ -34,3 +36,4 @@
   </div>
 </div>
 <app-cadusuario></app-cadusuario>
+<router-outlet></router-outlet>

@@ -16,6 +16,8 @@ import { LoginComponent } from './login/login.component';
 import { DepoimentoComponent } from './depoimento/depoimento.component';
 import { ContatoComponent } from './contato/contato.component';
 import { CadusuarioComponent } from './cadusuario/cadusuario.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { routes } from './app.routes';
 
 @NgModule({
   declarations: [
@@ -29,18 +31,15 @@ import { CadusuarioComponent } from './cadusuario/cadusuario.component';
     LoginComponent,
     DepoimentoComponent,
     ContatoComponent,
-    CadusuarioComponent
+    CadusuarioComponent,
+    DashboardComponent    
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     MaterializeModule,
-    RouterModule.forRoot([
-      { path: '', component: AppComponent },
-      { path: 'login', component: LoginComponent },
-      { path: 'cadusuario', component: CadusuarioComponent }
-    ])
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
