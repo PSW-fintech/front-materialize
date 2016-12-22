@@ -1,49 +1,75 @@
-    <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
-      <header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
-        <div class="mdl-layout__header-row">
-          <span class="mdl-layout-title">Home</span>
-          <div class="mdl-layout-spacer"></div>
-          <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
-            <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
-              <i class="material-icons">search</i>
-            </label>
-            <div class="mdl-textfield__expandable-holder">
-              <input class="mdl-textfield__input" type="text" id="search" placeholder="Busque um projeto">
-              <label class="mdl-textfield__label" for="search"></label>
-            </div>
-          </div>
-          <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="hdrbtn">
-            <i class="material-icons">more_vert</i>
-          </button>
-          <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right" for="hdrbtn">
-            <li class="mdl-menu__item">Perfil</li>
-            <li class="mdl-menu__item">Sair</li>
-          </ul>
-        </div>
-      </header>
-      <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
-        <header class="demo-drawer-header">
-          <img src="../assets/user.jpg" class="demo-avatar">
-          <div class="demo-avatar-dropdown">
-            <span>Natasha Belo</span>
-            
-          </div>
-        </header>
-        <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
-          <a class="mdl-navigation__link" href="/dashboard"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Painel</a>
-          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">work</i>Projetos</a>
-          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">trending_up</i>Investimentos</a>
-          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">dashboard</i>Simulações</a>
-          <div class="mdl-layout-spacer"></div>
-          <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">help_outline</i><span class="visuallyhidden">Help</span></a>
-        </nav>
-      </div>
+<div class="row">
+  <div class="navbar-fixed nav-extended">
+  <nav>
+      <div class="nav-wrapper">
 
-      <main class="mdl-layout__content mdl-color--grey-100">
-        <div class="mdl-grid demo-content">
-        </div>
-         
-      </main>
+      	<!-- Ativo somente em tela pequena-->
+			<a href="#" data-activates="slide-out" class="button-collapse hide-on-large-only"><i class="material-icons">menu</i></a>
+
+      
+        <a href="#" class="brand-logo">
+          <img src="../assets/logo.png" class="img-with-margin" />
+        </a>
+        <a href="#" materialize="sideNav" [materializeParams]="[{edge: 'left'}]"
+        data-activates="mobile-demo" class="button-collapse">
+          <i class="material-icons">menu</i>
+        </a>
+        <ul class="right hide-on-med-and-down">
+            <li><form>
+				        <div class="input-field">
+				        	<input id="search" type="search" required autocomplete="off" spellcheck="false">
+				        	<label for="search"><i class="material-icons grey-text text-darken-1">search</i></label>
+				        </div>
+			    </form></li>
+           	<li><i class="material-icons grey-text text-darken-1 waves-effect waves-grey">notifications</i></li>
+				<li><i class="material-icons grey-text text-darken-1 waves-effect waves-grey">settings</i></li>
+				<li><a href="#!" class="grey-text text-darken-1 waves-effect waves-grey"><i class="material-icons">exit_to_app</i>Logout</a></li>
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+            <li><form>
+				        <div class="input-field">
+				        	<input id="search" type="search" required autocomplete="off" spellcheck="false">
+				        	<label for="search"><i class="material-icons grey-text text-darken-1">search</i></label>
+				        </div>
+			    </form></li>
+           	<li><i class="material-icons grey-text text-darken-1 waves-effect waves-grey">notifications</i></li>
+				<li><i class="material-icons grey-text text-darken-1 waves-effect waves-grey">settings</i></li>
+				<li><a href="#!" class="grey-text text-darken-1 waves-effect waves-grey"><i class="material-icons">exit_to_app</i>Logout</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>
+
+
+
+<!-- Sidenav -->
+<header>
+<ul id="slide-out" class="side-nav fixed midnight">
+  <li><a href="/dashboard" class="logomarca midnight white-text"><img src="../assets/logo.png" class="img-with-margin"></a></li>
+	<li><a href="#!" class="midnight-text"><i class="material-icons midnight-text">dashboard</i>Painel</a></li>
+	<li><a href="#!" class="midnight-text"><i class="material-icons midnight-text">cloud</i>Projetos</a></li>
+	<li><a href="#!" class="midnight-text"><i class="material-icons midnight-text">trending_up</i>Investimentos</a></li>
+	<li><a href="#!" class="midnight-text"><i class="material-icons midnight-text">view_quilt</i>Simulações</a></li>
+</ul>  
+</header>
+
+<main>
+ <div class="row main">
+    <h3 materialize="scrollSpy" [materializeParams]="[{scrollOffset: 800}]" class="blue-text darken-1-text section scrollspy" id="projetos">Meus Projetos:</h3>
+    <app-projeto></app-projeto>
+    <app-projeto></app-projeto>
+    <app-projeto></app-projeto>
+    <app-projeto></app-projeto>
+  </div>
+  <div class="row main">
+    <h3 materialize="scrollSpy" [materializeParams]="[{scrollOffset: 800}]" class="blue-text darken-1-text section scrollspy" id="projetos">Meus Investimentos:</h3>
+    <app-projeto></app-projeto>
+    <app-projeto></app-projeto>
+    <app-projeto></app-projeto>
+    <app-projeto></app-projeto>
+  </div>
+</main>
       
 
       
