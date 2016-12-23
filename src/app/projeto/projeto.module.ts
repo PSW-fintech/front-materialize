@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProjetoComponent } from './projeto.component';
-import { ProjetoFabComponent } from '../projeto-fab/projeto-fab.component';
-import { ProjetoTagComponent } from '../projeto-tag/projeto-tag.component';
+import { ProjetoFabComponent } from './fab/projeto-fab.component';
+import { ProjetoTagComponent } from './tag/projeto-tag.component';
+import { CadprojetoComponent } from './cadprojeto/cadprojeto.component';
 
 @NgModule({
   imports: [
@@ -10,6 +11,6 @@ import { ProjetoTagComponent } from '../projeto-tag/projeto-tag.component';
     ProjetoFabComponent,
     ProjetoTagComponent
   ],
-  declarations: [ProjetoComponent]
+  declarations: [ProjetoComponent, CadprojetoComponent]
 })
 export class ProjetoModule { }

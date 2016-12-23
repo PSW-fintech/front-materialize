@@ -8,8 +8,10 @@ import { RouterModule }   from '@angular/router';
 import { AppComponent } from './app.component';
 import { CabecalhoComponent } from './cabecalho/cabecalho.component';
 import { ProjetoComponent } from './projeto/projeto.component';
-import { ProjetoFabComponent } from './projeto-fab/projeto-fab.component';
-import { ProjetoTagComponent } from './projeto-tag/projeto-tag.component';
+import { ProjetoFabComponent } from './projeto/fab/projeto-fab.component';
+import { ProjetoTagComponent } from './projeto/tag/projeto-tag.component';
+import { CadprojetoComponent } from './projeto/cadprojeto/cadprojeto.component';
+
 import { SliderComponent } from './slider/slider.component';
 import { RodapeComponent } from './rodape/rodape.component';
 import { LoginComponent } from './login/login.component';
@@ -32,7 +34,8 @@ import { routes } from './app.routes';
     DepoimentoComponent,
     ContatoComponent,
     CadusuarioComponent,
-    DashboardComponent    
+    DashboardComponent,
+    CadprojetoComponent
   ],
   imports: [
     BrowserModule,
