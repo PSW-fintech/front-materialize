@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Projeto } from '../../model/projeto.model';
 
 @Component({
   selector: 'app-projeto-fab',
@@ -6,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./projeto-fab.component.scss']
 })
 export class ProjetoFabComponent implements OnInit {
-
+  
+  @Input()
+  Projeto: Projeto;
+  
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    
+  }
 
 }

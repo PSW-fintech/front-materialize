@@ -1,14 +1,16 @@
 <div class="col s12 m4 l3">
   <div class="card large hoverable">
-    <app-projeto-fab></app-projeto-fab>
+    
+    <app-projeto-fab [Projeto]="listaprojeto[0]"></app-projeto-fab>
+    
     <div class="card-image">
       <img src ="http://lorempixel.com/output/animals-q-c-334-250-8.jpg">
       <span class="card-title">
-         <p class="left"> {{ nome }} </p>
+         <p class="left"> {{ listaprojeto[0].getNome() }} </p>
       </span>
     </div>
     <div class="card-content">
-      <p class="truncate"> {{ resumo }} </p>
+      <p class="truncate"> {{ listaprojeto[0].getDescricao() }} </p>
       <app-projeto-tag></app-projeto-tag>
     </div>
     <div class="card-action">

@@ -19,6 +19,8 @@ import { DepoimentoComponent } from './depoimento/depoimento.component';
 import { ContatoComponent } from './contato/contato.component';
 import { CadusuarioComponent } from './cadusuario/cadusuario.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+
+import { ProjetoService } from './projeto/projeto.service';
 import { routes } from './app.routes';
 
 @NgModule({
@@ -44,7 +46,7 @@ import { routes } from './app.routes';
     MaterializeModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [ProjetoService],
   bootstrap: [AppComponent]
 })
 

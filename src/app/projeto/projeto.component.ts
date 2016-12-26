@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import '../model/projeto.model.ts';
+import { Projeto } from '../model/projeto.model.ts';
+import { ProjetoService } from './projeto.service.ts'
 
 @Component({
   selector: 'app-projeto',
@@ -7,11 +8,14 @@ import '../model/projeto.model.ts';
   styleUrls: ['./projeto.component.scss']
 })
 export class ProjetoComponent implements OnInit {
- nome = 'Nome Projeto';
- resumo  = 'Breve descrição do projeto.';
+ listaprojeto: Projeto[] = [];
  
-  constructor() {  }
+ constructor( private projetoservice: ProjetoService) {
+  
+ }
 
-  ngOnInit() { }
+ ngOnInit() {
+  this.listaprojeto = this.projetoservice.getProjeto();
+ }
 
 }

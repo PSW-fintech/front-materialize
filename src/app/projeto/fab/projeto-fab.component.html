@@ -3,28 +3,28 @@
       <i class="large material-icons hoverable">mode_edit</i>
     </a>
   <ul>
-    <li><a class="btn-floating red hoverable tooltipped"
+    <li><a *ngIf(Projeto.getRemovivel()) class="btn-floating red hoverable tooltipped"
       data-position="bottom"
       data-delay="50"
       data-tooltip="Remover">
       <i class="material-icons">delete_forever</i>
     </a></li>
 
-    <li><a class="btn-floating yellow darken-1 hoverable tooltipped"
+    <li><a *ngIf(Projeto.getInvestivel()) class="btn-floating yellow darken-1 hoverable tooltipped"
       data-position="bottom"
       data-delay="50"
       data-tooltip="Investir">
       <i class="material-icons">attach_money</i>
     </a></li>
 
-    <li><a class="btn-floating green hoverable tooltipped"
+    <li><a *ngIf(!Projeto.getInvestivel()) class="btn-floating green hoverable tooltipped"
       data-position="bottom"
       data-delay="50"
       data-tooltip="Publicar">
       <i class="material-icons">publish</i>
     </a></li>
 
-    <li><a class="btn-floating blue hoverable tooltipped"
+    <li><a *ngIf(Projeto.getEditavel()) class="btn-floating blue hoverable tooltipped"
       data-position="bottom"
       data-delay="50"
       data-tooltip="Atualizar">
